@@ -40,6 +40,20 @@ public class ShowDTO {
 	}
 
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ShowDTO [theatre_id=");
+		builder.append(theatre_id);
+		builder.append(", movie_id=");
+		builder.append(movie_id);
+		builder.append(", theatre_name=");
+		builder.append(theatre_name);
+		builder.append("]");
+		return builder.toString();
+	}
+
+
 	
 	
 	

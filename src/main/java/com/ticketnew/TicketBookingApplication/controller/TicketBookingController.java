@@ -22,6 +22,7 @@ import com.ticketnew.TicketBookingApplication.bean.Movie;
 import com.ticketnew.TicketBookingApplication.bean.ShowDTO;
 import com.ticketnew.TicketBookingApplication.bean.Theatre;
 import com.ticketnew.TicketBookingApplication.service.TicketBookingService;
+import com.ticketnew.TicketBookingApplication.ticketbookingentity.Bookings;
 import com.ticketnew.TicketBookingApplication.ticketbookingentity.Shows;
 
 @RestController
@@ -29,10 +30,26 @@ public class TicketBookingController {
 	
 	   @Autowired
 	   TicketBookingService ticketService;
+	@GetMapping("/test")
+	public String test() {
+		return "Running...";
+	}
 	
+	@GetMapping("/shows")
+	public ResponseEntity<List<Shows>> getAllShows() {
+		List<Shows> shows = ticketService.getShows();
+		return ResponseEntity.ok(shows);
+	}
 	@PostMapping("/addshow")
 	public ResponseEntity<Shows> addNewShow(@RequestBody ShowDTO request) {
 		 Shows response = ticketService.addShow(request);
+		 System.out.println(request);
 		 return ResponseEntity.ok(response);
+	}
+	
+	@PostMapping("/bookmovie")
+	public ResponseEntity<Bookings> bookTicket(@RequestBody Bookings request) {
+		Bookings response = ticketService.addNewBooking(request);
+		return ResponseEntity.ok(response);
 	}
 }
