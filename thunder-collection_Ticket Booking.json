@@ -1,0 +1,151 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Ticket Booking",
+    "dateExported": "2024-11-15T10:10:58.079Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3c9cbbad-8406-4ca0-80a9-e86bf4a1193f",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Save New Movie",
+            "url": "http://localhost:8086/savemovie",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-15T04:50:59.277Z",
+            "modified": "2024-11-15T09:21:40.546Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"movie_name\":\"Kanguva\",\n    \"movie_lang\":\"TAM\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ce53275-c6b9-4ae8-ac0a-43a4341285f9",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Save New Theatre",
+            "url": "http://localhost:8086/savetheatre",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-11-15T04:50:59.278Z",
+            "modified": "2024-11-15T04:53:28.753Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"theatre_name\":\"AGS\",\n    \"theatre_location\":\"Chennai\",\n    \"screen\":{\n        \"screen_name\":\"SCREEN-1\",\n        \"seats\":60\n    }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef9b7fb6-917d-4d4c-8ed3-0eac70b95bfa",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Get All Movies",
+            "url": "http://localhost:8086/movies",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-11-15T04:50:59.279Z",
+            "modified": "2024-11-15T04:50:59.279Z",
+            "headers": []
+        },
+        {
+            "_id": "a838b011-ec2d-4904-9a4c-da95b0466a18",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Get All Theatres",
+            "url": "http://localhost:8086/theatres",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-11-15T04:50:59.280Z",
+            "modified": "2024-11-15T04:50:59.280Z",
+            "headers": []
+        },
+        {
+            "_id": "98866f83-6469-4097-8c8d-4a00f0cb90ff",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Get Movie By Id",
+            "url": "http://localhost:8086/movies/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-11-15T04:50:59.281Z",
+            "modified": "2024-11-15T09:12:14.869Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b1ec31cb-0b13-4b21-8912-55e87601e88a",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Get Theatre By Id",
+            "url": "http://localhost:8086/theatres/1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-11-15T04:50:59.282Z",
+            "modified": "2024-11-15T09:12:25.361Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "380b8c4d-7abe-472b-94f2-d6980432dbaa",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "http://localhost:8080/addshow",
+            "url": "http://localhost:8080/addshow",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-11-15T05:31:38.077Z",
+            "modified": "2024-11-15T09:21:49.225Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"theatre_id\":1,\n  \"movie_id\":2,\n  \"theatre_name\":\"AGS\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "871fe3d9-83d7-4eeb-a62a-fff4fd227061",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Book Ticket",
+            "url": "http://localhost:8080/bookmovie",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-11-15T09:53:44.752Z",
+            "modified": "2024-11-15T09:59:43.387Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"show_id\":1,\n  \"seats\":30\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2ef08e4-2b3f-4793-8f2e-54bcbd979df2",
+            "colId": "156357f0-6251-4a8c-9bc7-ff1ccb34c1b9",
+            "containerId": "",
+            "name": "Get All Shows",
+            "url": "http://localhost:8080/shows",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-11-15T09:58:26.986Z",
+            "modified": "2024-11-15T09:58:47.808Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
