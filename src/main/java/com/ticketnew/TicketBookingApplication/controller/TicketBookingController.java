@@ -52,4 +52,7 @@ public class TicketBookingController {
 		Bookings response = ticketService.addNewBooking(request);
 		return ResponseEntity.ok(response);
 	}
+	
+	@PostMapping("/movies/language/{lang}")
+	public List<Shows> getShowsByLang(@Path)
 }
